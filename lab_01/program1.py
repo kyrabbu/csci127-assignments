@@ -35,3 +35,16 @@ print(sleep_in(False,True))
 print(sleep_in(False,False))
 print(sleep_in(True,True))
 print(sleep_in(True,False))
+
+#warmup-1>monkey trouble
+def monkey_trouble(a_smile, b_smile):
+  if a_smile and b_smile:
+    return True
+  if not a_smile and not b_smile:
+    return True
+  return False
+
+print(monkey_trouble(True, False))
+print(monkey_trouble(False, False))
+print(monkey_trouble(True, True))
+print(monkey_trouble(False, True))
