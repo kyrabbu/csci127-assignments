@@ -17,3 +17,9 @@ def make_abba(a, b):
 print(make_abba("Hi","Bye"))
 print(make_abba("Yo","Alice"))
 print(make_abba("What","Up"))
+
+#String-1>make_tags
+def make_tags(tag, word):
+  return "<"+tag+">"+word+"</"+tag+">"
+
+print(make_tags("i","Yay"))
