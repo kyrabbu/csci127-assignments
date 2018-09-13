@@ -1,12 +1,16 @@
-type ls then enter
-type cd csci-127-assignments then enter
-type mkdir quiz-01 then enter
-type cd quiz-01 then enter
-type touch Readme.md then enter
+how to create Readme.md fil
+(1) type ls then enter
+(2) type cd csci-127-assignments then enter
+(3) type mkdir quiz-01 then enter
+(4) type cd quiz-01 then enter
+(5) type touch Readme.md then enter
 
 to move p1.py to github
-git add p1.py
-git commit -a -m "added p1"
-git push
+(1) cd into csci127-assignments
+(2) touch p1.py
+(3) open p1.py in thonny and edit file
+(4) git add p1.py
+(5) git commit -a -m "added p1"
+(6) git push
 
 
