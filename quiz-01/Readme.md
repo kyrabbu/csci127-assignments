@@ -6,11 +6,11 @@ how to create Readme.md fil
 (5) type touch Readme.md then enter
 
 to move p1.py to github
-(1) cd into csci127-assignments
-(2) touch p1.py
+(1) cd csci127-assignments then enter
+(2) touch p1.py then enter
 (3) open p1.py in thonny and edit file
-(4) git add p1.py
-(5) git commit -a -m "added p1"
-(6) git push
+(4) git add p1.py then enter
+(5) git commit -a -m "added p1" then enter
+(6) git push then enter
 
 
