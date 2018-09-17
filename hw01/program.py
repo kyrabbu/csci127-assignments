@@ -45,3 +45,21 @@ def part_pig_latin(name):
 print(part_pig_latin('hello'))
 print(part_pig_latin('nothing'))
 print(part_pig_latin('pink'))
+
+def make_out_word(out, word):
+  wrd = out[0:2] + word + out[2:] #the second number in the [0:2] prints position before it
+  return wrd
+
+print(make_out_word('<<>>', 'Yay'))
+print(make_out_word('<<>>', 'WooHoo'))
+print(make_out_word('HHoo', 'Hello'))
+
+def make_tags(tag, word):
+  x = '<' + tag + '>' + word + '</' + tag + '>'
+  return x
+
+print(make_tags('i', 'Yay'))
+print(make_tags('i', 'Hello'))
+print(make_tags('cite', 'Yay'))
+
+
