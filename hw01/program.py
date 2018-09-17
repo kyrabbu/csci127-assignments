@@ -3,6 +3,7 @@
 #HW01
 #091718
 
+#Number 1
 def capitalize(name):
     """
     input: name --> a string in the form "first last"
@@ -14,7 +15,9 @@ def capitalize(name):
 print(capitalize('kyra abbu'))
 print(capitalize('john doe'))
 print(capitalize('mary kate'))
+print(capitalize('testing this'))
 
+#Number 2
 def init(name):
     """
     Input: name --> a string in the form "first last"
@@ -30,7 +33,9 @@ def init(name):
 print(init('kyra abbu'))
 print(init('john doe'))
 print(init('mary kate'))
+print(init('testing this'))
 
+#Number 3
 def part_pig_latin(name):
     """
     Input: A string that is a single lower case word
@@ -46,6 +51,7 @@ print(part_pig_latin('hello'))
 print(part_pig_latin('nothing'))
 print(part_pig_latin('pink'))
 
+#Number 4
 def make_out_word(out, word):
   wrd = out[0:2] + word + out[2:] #the second number in the [0:2] prints position before it
   return wrd
@@ -54,6 +60,7 @@ print(make_out_word('<<>>', 'Yay'))
 print(make_out_word('<<>>', 'WooHoo'))
 print(make_out_word('HHoo', 'Hello'))
 
+#Number 5
 def make_tags(tag, word):
   x = '<' + tag + '>' + word + '</' + tag + '>'
   return x
