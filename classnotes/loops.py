@@ -10,6 +10,8 @@ If statement - do it 1 time or 0 times
 While loop - many times or none
 if i = i + 1 did not exist, you will have an infinite loop; this is an increment
 i  = 1 : initialize; if you do not initialize, it uses whatever is stored in its memory
+
+www.break-in.tech/lessons/pair-programming-for-beginners
 """
 
 #infinite loop
