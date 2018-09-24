@@ -13,15 +13,15 @@ def fizzbuzz(max_value):
     i = 1
     while i <= max_value:
         if (i % 5 == 0) and (i % 3 == 0): #must go first so that 3 and 5 do not repeat 
-            print("FizzBuzz")
+            print("FizzBuzz") #if divisible by both
             count +=1 #counts how many times FizzBuzz occurs
-        elif i % 3 == 0:
-            print("Fizz")
-        elif i % 5 == 0:
-            print("Buzz")
-        else:
+        elif i % 3 == 0: #must use elif so it scans this after "if"
+            print("Fizz") #if divisible by 3
+        elif i % 5 == 0: 
+            print("Buzz") #if divisible by 5
+        else: #if not divisible by anything
             print(i)
-        i = i + 1
-    return print(count) #returns value of count
+        i = i + 1 #loops until it reaches 100
+    return print("Count:", count) #returns value of count
 
 fizzbuzz(100)
