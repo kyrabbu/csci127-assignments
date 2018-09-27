@@ -3,7 +3,7 @@ from random import randint  #import to generate random integer
 
 def mysqrt(number):
     print("Guess the square root of", number,":")
-    guess = randint(0, number) #generates random number
+    guess = randint(1, number) #generates random number
     previousGuess = 0 #stores value under while
     numberOfGuesses = 0 #counts loop times
     while previousGuess != guess:
