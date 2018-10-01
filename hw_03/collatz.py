@@ -12,7 +12,8 @@ repeats until n=1
 def collatz(n):
     print("Initial Value:", n) 
     i = 0
-    while n != 1: #repeats until n is 1
+    #if n=1 stop: do not do this bc this means check once
+    while n != 1: #repeats until n is 1 #while-as long as its true do it
         if n % 2 == 0: #even
             n = n//2
             print(n)
@@ -24,3 +25,4 @@ def collatz(n):
         
 collatz(20)
 collatz(21)
+collatz(1)
