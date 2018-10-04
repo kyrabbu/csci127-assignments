@@ -88,6 +88,25 @@ def reverse(l):
     build and return a new list which has the same elements as the
     original but with the values reversed.
     """
+    print('\nOld List:', l)
+    length = len(l)
+    new_length = length
+    new_list = []           
+ #   i = 0
+ #   while i <= len(l):
+ #   if i != len(new_list):
+    for element in l:
+            new_length = new_length - 1
+            item = l[new_length]
+            new_list.append(item)
+            #i+=1
+    return new_list
+    
+        
+print("\nReverse Function:")
+print("New List 1:", reverse(build_random_list(10,50)))
+print("New List 2:", reverse(build_random_list(5,2)))
+print("New List 3:", reverse(build_random_list(40,99)))
     
         
 #5   
