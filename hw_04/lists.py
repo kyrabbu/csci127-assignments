@@ -1,5 +1,22 @@
 #Kyra Abbu
+"""
+Notes:
+while loop: repeats a statement or group of statements while a
+given condition is TRUE. It tests the condition before
+executing the loop body.
 
+for loop: executes a sequence of statements multiple times
+and abbreviates the code that manages the loop variable.
+
+break statement: terminates the loop statement and transfers
+execution to the statement immediately following the loop.
+
+continue statement: causes the loop to skip the remainder
+of its body and immediately retest its condition prior to reiterating.
+
+pass statement: the pass statement in is used when a statement is
+required syntactically but you do not want any command or code to execute.
+"""
 import random
 
 #1
@@ -109,7 +126,13 @@ print("New List 2:", reverse(build_random_list(5,2)))
 print("New List 3:", reverse(build_random_list(40,99)))
     
         
-#5   
+#5 ***
+"""
+return statement in for loops:
+return applies to the function and happens to ***terminate the for loop
+prematurely*** by primarily bringing an end to the function
+"""
+
 def isIncreasing(l):
     """
     This function should accept a list as its parameter. It will
@@ -118,8 +141,20 @@ def isIncreasing(l):
     the previous. For example, the list 1,5,10,11,13 is increasing
     while 1,5,3,6 and 1,4,4,6 are not.
     """
+    old_num = l[0] #previous value
+    for element in l: #scans all elements
+        if element < old_num: #descending
+            #element is the number after old_num
+            return False #if conditions are met here, it will terminate program
+        # this will then repeat until for loop scans all successive items
+        old_num = element #reassign
+    return True #will execute if false did not hinder execution
 
-#6
+print('\nIncreasing:', isIncreasing(build_random_list(40,99)))
+print('\nIncreasing:', isIncreasing(build_random_list(10,24)))
+
+
+#6 ***
 def palindrome(l):
     """
     This function should return True if the list represents a palindrome
