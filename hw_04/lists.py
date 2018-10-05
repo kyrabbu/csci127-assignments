@@ -37,7 +37,7 @@ def build_random_list(size,max_value):
         i = i + 1
     return l
 
-#test
+#tests
 print('Build Random List Function:')
 print('Random List 1:', build_random_list(10,50))
 print('\nRandom List 2:', build_random_list(100,100))
@@ -65,7 +65,7 @@ def locate(l,value):
         else:
             i+=1
         
-#test
+#tests
 print('\nLocate Function:')
 print('List 1 ', locate(build_random_list(10,50),14))
 print('\nList 2 ', locate(build_random_list(100,100),21))
@@ -90,11 +90,14 @@ def count(l,value):
     return counter       
         
 #test
+countThis = [21, 21, 21, 26]
+
 print('\nCount Function:')
 print('List 1 ', 'Count:',count(build_random_list(10,50),14))
 print('\nList 2 ', 'Count:',count(build_random_list(100,100),21))
 print('\nList 3 ', 'Count:',count(build_random_list(25,13),1))
 print('\nList 4 ', 'Count:',count(build_random_list(100,1000),9999))
+print('\nList 5 ', 'Count:',count((countThis),21))
     
 
     
