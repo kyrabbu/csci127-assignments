@@ -142,6 +142,7 @@ def isIncreasing(l):
     while 1,5,3,6 and 1,4,4,6 are not.
     """
     old_num = l[0] #previous value
+    print("\nList:", l)
     for element in l: #scans all elements
         if element < old_num: #descending
             #element is the number after old_num
@@ -150,9 +151,14 @@ def isIncreasing(l):
         old_num = element #reassign
     return True #will execute if false did not hinder execution
 
-print('\nIncreasing:', isIncreasing(build_random_list(40,99)))
-print('\nIncreasing:', isIncreasing(build_random_list(10,24)))
+a = [1, 2, 3, 4, 5]
+b = [1, 2, 3, 1, 2]
 
+print('\nisIncreasing Function:')
+print("Increasing?",isIncreasing(a))
+print("Increasing?",isIncreasing(b))
+print("Increasing?",isIncreasing(build_random_list(10,50)))
+print("Increasing?",isIncreasing(build_random_list(100,999)))
 
 #6 ***
 def palindrome(l):
@@ -161,6 +167,23 @@ def palindrome(l):
     and False otherwise. A list is a palindrome if it has the same elements
     left to right as it does right to left.
     """
+    print("\nList:",l)
+    i = 0
+    for element in l:
+        if element != l[i-1]:
+            return False
+        i = i - 1
+    return True
 
+            
+k = [1, 2, 3, 6, 2, 1]
+j = [1, 2, 3, 3, 2, 1]
+
+#tests
+print('\nPalindrome Function:')
+print(palindrome(k))
+print(palindrome(j))
+print(palindrome(build_random_list(40,99)))
+print(palindrome(build_random_list(10,24)))
 
 
