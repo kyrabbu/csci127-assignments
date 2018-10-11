@@ -17,6 +17,7 @@ of its body and immediately retest its condition prior to reiterating.
 pass statement: the pass statement in is used when a statement is
 required syntactically but you do not want any command or code to execute.
 """
+
 import random
 
 #1
@@ -144,6 +145,7 @@ def isIncreasing(l):
     the previous. For example, the list 1,5,10,11,13 is increasing
     while 1,5,3,6 and 1,4,4,6 are not.
     """
+    """
     old_num = l[0] #previous value
     print("\nList:", l)
     for element in l: #scans all elements
@@ -153,6 +155,20 @@ def isIncreasing(l):
         # this will then repeat until for loop scans all successive items
         old_num = element #reassign
     return True #will execute if false did not hinder execution
+    """
+    increasing = True
+    i = 0
+    while i < len(l)-1: #without -1 it will go out of index
+        if l[i] >= l[i+1]:
+            increasing = False
+            break
+        i = i + 1
+        return increasing
+    
+    
+    
+    
+    
 
 a = [1, 2, 3, 4, 5]
 b = [1, 2, 3, 1, 2]
@@ -169,6 +185,9 @@ def palindrome(l):
     This function should return True if the list represents a palindrome
     and False otherwise. A list is a palindrome if it has the same elements
     left to right as it does right to left.
+    You can use reverse function
+    you can check if reverse is the same thing as original
+    not append, (pre)pend
     """
     print("\nList:",l)
     i = 0
@@ -189,4 +208,9 @@ print(palindrome(j))
 print(palindrome(build_random_list(40,99)))
 print(palindrome(build_random_list(10,24)))
 
-
+"""
+break - breaks out of current loop
+continue - goes back up to the top
+reverse puts things in a list
+list function 
+"""
