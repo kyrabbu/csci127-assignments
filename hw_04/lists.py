@@ -53,7 +53,7 @@ def locate(l,value):
     isn’t in the list. 
     """
     i = 0
-    while i <= len(l):
+    while i < len(l):
         if value not in l: #if not found, program ends here
             x = 'Not Found: ' + str(-1)
             return x
