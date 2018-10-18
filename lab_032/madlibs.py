@@ -29,6 +29,7 @@ sixth = "overcomes this by"
 seventh = "Readers learn"
 
 def madlibs_one(x):
+    print("Sentence:", x)
     sentence = x.split()
     select = random.choice(noun_place)
     sentence.append(select)
@@ -36,6 +37,7 @@ def madlibs_one(x):
     return sentence
     
 def madlibs_two(x):
+    print("Sentence:", x)
     global noun_char
     sentence = x.split()
     select_name = random.choice(noun_char)
@@ -47,19 +49,21 @@ def madlibs_two(x):
     return sentence
 
 def madlibs_three(x):
+    print("Sentence:", x)
     global pronoun
     sentence = x.split()
     select_pronoun = random.choice(pronoun)
     select_bad = random.choice(adj_bad)
     select_good = random.choice(adj_good)
     sentence.insert(0, select_pronoun)
-    sentence.insert(2, select_bad)
-    sentence.insert(4, select_good)
+    sentence.insert(3, select_bad)
+    sentence.insert(5, select_good)
     sentence = str(" ".join(sentence)) + '.'
     pronoun = select_pronoun
     return sentence
 
 def madlibs_four(x):
+    print("Sentence:", x)
     sentence = x.split()
     select_verb = random.choice(verb)
     sentence.insert(0, pronoun)
@@ -68,6 +72,7 @@ def madlibs_four(x):
     return sentence
 
 def madlibs_five(x):
+    print("Sentence:", x)
     sentence = x.split()
     select_problem = random.choice(problem)
     sentence.append(select_problem)
@@ -75,6 +80,7 @@ def madlibs_five(x):
     return sentence
     
 def madlibs_six(x):
+    print("Sentence:", x)
     sentence = x.split()
     select_gerund = random.choice(gerund)
     sentence.append(select_gerund)
@@ -83,6 +89,7 @@ def madlibs_six(x):
     return sentence
 
 def madlibs_seven(x):
+    print("Sentence:", x)
     sentence = x.split()
     select_theme = random.choice(theme)
     sentence.append(select_theme)
