@@ -33,23 +33,47 @@ def madlibs(sentence):
     sentence = sentence.split() #makes input (sentence), which is a string, into a list
     for element in sentence: #this scans every element in list we created
         if element == "<SETTING>": #checks every element beginning from index 0 until it finds <"SETTING"> then performs code below
-            select = random.choice(noun_place) #this uses the import random and ".choice" means select random value from (noun_place) which is our list
-            replacement = sentence.index(element) #sentence.index(element) means that in the list "sentence", which we created in the beginning,
-            #it will find the index or the position of "element", element being something inside the list, then we are assigning its position number
-            #to the variable "replacement"
-            #replacement then becomes a variable with a number associated with, example: replacement = 3 (if index of element is 3)
-            sentence[replacement] = select #we are saying that in the list named "sentence" in the [position number] the index being assigned previously,
-            #it will REPLACE that element in the list into "select" which is the random value we looked for in the beginning of code
-            continue #this will return the program back to the start, moving onto the following value in the list, which is the value after "<SETTING">
+            select = random.choice(noun_place) #this uses the import random and ".choice" means
+                                                #select random value from (noun_place) which is our list
+            replacement = sentence.index(element)
+            """
+            sentence.index(element) means that in the list "sentence",
+            which we created in the beginning, it will find the index
+            or the position of "element", element being something inside
+            the list, then we are assigning its position number
+            to the variable "replacement" replacement then becomes a variable
+            with a number associated with, example: replacement = 3 (if index of element is 3)
+            """
+            
+            sentence[replacement] = select
+            
+            """we are saying that in the list named "sentence" in the
+            [position number] the index being assigned previously, it will REPLACE
+            that element in the list into "select" which is the random value we
+            looked for in the beginning of code"""
+            
+            continue
+        
+            """this will return the program back to the start, moving onto the following
+            value in the list, which is the value after "<SETTING">"""
+            
         elif element == "<CHARACTER>":
             select_name = random.choice(noun_char)
             replacement = sentence.index(element)
             sentence[replacement] = select_name
-            result_char = select_name #just like what we do in while loops for increment "i = 0" where in the end we add "i = i + 1" we are doing the same here
-            #since we are assigning a string, not a number, we are replacing " " to the string select_name         
+            result_char = select_name
+            """
+            just like what we do in while loops for increment "i = 0" where
+            in the end we add "i = i + 1" we are doing the same here
+            since we are assigning a string, not a number, we are
+            replacing " " to the string select_name
+            """
             continue
         elif element == "<PRONOUN>":
-            answer = pronoun_find(result_char) #call another function which is on top, then the result from that function, we assign to answer to be able to use it in this funtion
+            answer = pronoun_find(result_char)
+            """call another function which is on top, then the result from that
+            function, we assign to answer to be able to use it in this funtion
+            """
             replacement = sentence.index(element)
             sentence[replacement] = answer
             continue
@@ -97,8 +121,13 @@ def madlibs(sentence):
             select = random.choice(theme)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            sentence = str(" ".join(sentence)) #we do not want this in the beginning of our code or prior if/elif statements because it will turn our program
-            #into a string and we cannot use it unless we add another line of code but this will join it all together and make a string
+            sentence = str(" ".join(sentence))
+            """
+            we do not want this in the beginning of our code or prior if/elif
+            statements because it will turn our program
+            into a string and we cannot use it unless we add another
+            line of code but this will join it all together and make a string
+            """
             print(sentence)
             return
 
