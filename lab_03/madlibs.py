@@ -29,6 +29,15 @@ def pronoun_find(value):
                 select = pronoun[1]
         return select #returns whichever one satisfies conditions
     
+def remove_dot(l):
+    new_list = []
+    for item in l:
+        if item != ".":
+            new_list.append(item)
+        else:
+            new_list[-1] = str(new_list[-1]) + '.'
+    return new_list
+    
 def madlibs(sentence):
     sentence = sentence.split() #makes input (sentence), which is a string, into a list
     for element in sentence: #this scans every element in list we created
@@ -92,44 +101,43 @@ def madlibs(sentence):
         elif element == "<CHARACTER2>":
             replacement = sentence.index(element)
             sentence[replacement] = result_char
-            #print(sentence)
             continue
         elif element == "<VERB>":
             select = random.choice(verb)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            #print(sentence)
             continue
         elif element == "<PROBLEM>":
             select = random.choice(problem)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            #print(sentence)
             continue
         elif element == "<CHARACTER3>":
             replacement = sentence.index(element)
             sentence[replacement] = result_char
-            #print(sentence)
             continue
         elif element == "<GERUND>":
             select = random.choice(gerund)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            #print(sentence)
             continue
         elif element == "<MESSAGE>":
             select = random.choice(theme)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            sentence = str(" ".join(sentence))
+            #sentence = str(" ".join(sentence))
             """
             we do not want this in the beginning of our code or prior if/elif
             statements because it will turn our program
             into a string and we cannot use it unless we add another
             line of code but this will join it all together and make a string
             """
-            print(sentence)
+            new_sentence = remove_dot(sentence)
+            new_sentence = str(" ".join(new_sentence))
+            print(new_sentence)
             return
+        
+
 
 #test
 madlibs(story)
