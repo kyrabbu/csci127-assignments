@@ -10,17 +10,24 @@ def compress_word(w):
             value = w[i].lower()
             newl.append(value)
         i = i + 1
-    print(''.join(newl))
+    return ''.join(newl)
+    
             
-compress_word("halloween") #hllwn
-compress_word("Special") #spcl
-compress_word("apple") #appl
-compress_word("oRaNge") #orng
+print(compress_word("halloween")) #hllwn
+print(compress_word("Special")) #spcl
+print(compress_word("apple")) #appl
+print(compress_word("oRaNge")) #orng
 
 def sentence(line):
-    x = compress_word(line)
-    return x
+    newl = []
+    sen = line.split(" ")
+    for element in sen:
+        new_sen = compress_word(element)
+        newl.append(new_sen)
+    return " ".join(newl)
     
-sentence("I like to eat apple pie.") #i lk t t ppl p
-sentence("Who is there")
+
+
+print(sentence("I like to eat apple pie.")) #i lk t et appl p
+print(sentence("Who is there")) #Wh is thr
     
