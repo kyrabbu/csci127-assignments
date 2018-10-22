@@ -5,7 +5,6 @@ def compress_word(w):
     newl = []
     vowel = "AEIOUaeiou"
     newl.append(w[0].lower())
-    print(w)
     while i < len(w):
         if w[i] not in vowel:
             newl.append(w[i])
