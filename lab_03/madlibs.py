@@ -125,7 +125,6 @@ def madlibs(sentence):
             select = random.choice(theme)
             replacement = sentence.index(element)
             sentence[replacement] = select
-            #sentence = str(" ".join(sentence))
             """
             we do not want this in the beginning of our code or prior if/elif
             statements because it will turn our program
