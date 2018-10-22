@@ -30,13 +30,13 @@ def pronoun_find(value):
         return select #returns whichever one satisfies conditions
     
 def remove_dot(l):
-    new_list = []
+    new_list = [] 
     for item in l:
-        if item != ".":
-            new_list.append(item)
+        if item != ".": 
+            new_list.append(item) #if item is not a period, it will add it to nnew list we made
         else:
-            new_list[-1] = str(new_list[-1]) + '.'
-    return new_list
+            new_list[-1] = str(new_list[-1]) + '.' #this will change the last item added in list with period
+    return new_list #transfers this value to the madlibs function
     
 def madlibs(sentence):
     sentence = sentence.split() #makes input (sentence), which is a string, into a list
