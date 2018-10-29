@@ -45,16 +45,8 @@ def freq(l,val):
             lf = lf + 1
     return lf
 
-"""
-scan each value and compare to succeeding values
-store in new_mode
-
-move on to next value and compare to succeeding values
-store in new_mode if newest mode is greater than new_mode
-"""
 def mode(l):
     max_mode = 0
-    current_mode = 0
     final_value = 0
     for i in l:
         current_mode = freq(l,i)
