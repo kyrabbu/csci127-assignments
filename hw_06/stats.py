@@ -39,19 +39,19 @@ def max(list):
 
 def freq(l,val):
     lf = 0
-    #print('\nFrequency of', str(val) + ':', l)
     for i in l:
         if val == i:
             lf = lf + 1
     return lf
 
+#look at an item, and repeat with list
 def mode(l):
     max_mode = 0
     final_value = 0
-    for i in l:
-        current_mode = freq(l,i)
-        if current_mode >= max_mode:
-            max_mode = current_mode
+    for i in l: #range(len(l))
+        current_mode = freq(l,i)  #checks for frequency of current i
+        if current_mode >= max_mode: 
+            max_mode = current_mode 
             final_value = i
     return final_value          
         
