@@ -49,7 +49,7 @@ def mode(l):
     max_mode = 0
     final_value = 0
     for i in l: #range(len(l))
-        current_mode = freq(l,i)  #checks for frequency of current i
+        current_mode = freq(l,i)  #linear opperation; loops through again; takes time
         if current_mode >= max_mode: 
             max_mode = current_mode 
             final_value = i
