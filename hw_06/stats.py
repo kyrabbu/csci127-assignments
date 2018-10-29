@@ -53,7 +53,10 @@ def mode(l):
         if current_mode >= max_mode: 
             max_mode = current_mode 
             final_value = i
-    return final_value          
+    return final_value
+
+#tallies
+#more efficient modes
         
 #tests
 l = build_list(100,11)
