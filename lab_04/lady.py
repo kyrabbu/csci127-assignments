@@ -1,70 +1,53 @@
+"""
+If there is no underscore, check if adjacent;
+If there is an underscore, count if there is more than two of each;
+
+"""
+
 def happyLadybugs(b):
-    if happiness(b):
+    if happy(b):
         return "YES"
     else:
         return "NO"
-    
-def happiness(b):
-    happy = False
-    if underscore(b):
-        happy = True
-    elif repeat(b):
-        if adjacent(b):
-            happy = True
-        else:
-            if space(b):
-                happy = True
-    return happy
-    
-def underscore(b):
-    result = True
-    if len(b) == 0:
-        result = False
-    for element in b:
-        if element != "_":
-            result = False 
-    return result
 
-def adjacent(b):
-    result = False
-    for i in range(len(b)):          
-        if b[i] == b[i-1] or b[i] == b[i+1]:
-            result = True
-        else:
-            result = False
-            break
-    return result
-
-def repeat(b):   
-    result = False
-    for element in b:
-        count = 0
-        if element != "_":
-            for item in b:
-                if element == item:
-                    count = count + 1
-            if count >= 2:
-                result = True
-            else:
-                result = False
-            break
-    return result
-
-def space(b):
-    count = 0
-    result = False
-    for element in b:
-        if element == "_":
-            count = count + 1
-    if count >= 1:
-        result = True
-    return result
+def happy(b):
+    if '_' not in b:
+        return scanAdjacent(b)
+    else: #if there is an underscore
+        b = b.replace("_","")
+        return TwoOrMore(b)       
         
-print("' '", happyLadybugs(""))
-print("_", happyLadybugs("_"))
-print("RBY_YBR", happyLadybugs("RBY_YBR"))
-print("X_Y__X", happyLadybugs("X_Y__X"))
-print("2", happyLadybugs("2"))
-print("B_RRBR", happyLadybugs("B_RRBR"))
-print("BB__", happyLadybugs("BB__"))
-print("ABAB", happyLadybugs("ABAB"))
+def scanAdjacent(b):
+    for i in range(1,len(b)): #does not include first and last
+            if b[i] != b[i-1] and b[i] != b[i-1]:
+                return False
+            else:
+                return True
+
+def ColorCount(b):
+    colors = {}
+    for a in b:
+        colors[a] = 0
+    for a in b:
+        colors[a] = colors[a]+1
+    return colors
+
+def TwoOrMore(b):
+    colors = ColorCount(b)
+    for value in colors.values():
+        if value < 2:
+            return False
+        return True
+    
+print("Empty String =>", happyLadybugs(""))        
+print("_ =>" ,happyLadybugs("_"))
+print("ABABABABA =>",happyLadybugs("ABABABABA"))
+print("AAABBBCCC =>",happyLadybugs("AAABBBCCC"))
+print("A_BCD =>",happyLadybugs("A_BCD"))
+print("_AACBCB =>",happyLadybugs("_AACBCB"))
+print("___ =>",happyLadybugs("___"))
+print("AB__ =>", happyLadybugs("AB__"))
+print("AA__ =>", happyLadybugs("AA__"))
+print("ABAB_ =>", happyLadybugs("ABAB_"))
+print("ABAB =>", happyLadybugs("ABAB"))
+print("AABB =>", happyLadybugs("AABB"))
