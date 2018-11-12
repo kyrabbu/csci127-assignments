@@ -39,13 +39,13 @@ def TwoOrMore(b):
             return False
         return True
     
-print("Empty String =>", happyLadybugs(""))        
-print("_ =>" ,happyLadybugs("_"))
+print("Empty String (NO BUGS) =>", happyLadybugs(""))        
+print("_ (NO BUGS) => " ,happyLadybugs("_"))
 print("ABABABABA =>",happyLadybugs("ABABABABA"))
 print("AAABBBCCC =>",happyLadybugs("AAABBBCCC"))
 print("A_BCD =>",happyLadybugs("A_BCD"))
 print("_AACBCB =>",happyLadybugs("_AACBCB"))
-print("___ =>",happyLadybugs("___"))
+print("___ (NO BUGS) =>",happyLadybugs("___"))
 print("AB__ =>", happyLadybugs("AB__"))
 print("AA__ =>", happyLadybugs("AA__"))
 print("ABAB_ =>", happyLadybugs("ABAB_"))
