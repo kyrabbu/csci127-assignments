@@ -33,7 +33,6 @@ print(encode("cbbbbbdee"))
 print(encode(" "))
 print(encode("__"))
 print(encode("AbCdEfCoNd"))
-print((encode("qwerty")))
 
 print("\nProgram will not return anything if input does not contain letters OR is not a letter.")
 print(decode(encode("abbaaacddaaa")))
@@ -43,7 +42,6 @@ print(decode(encode(" ")))
 print(decode(encode("__")))
 print(decode(encode("AbCdEfCoNd")))
 print(decode(encode("hell0")))
-print(decode(encode("qwerty")))
 
 
 
