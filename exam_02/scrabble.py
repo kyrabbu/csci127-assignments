@@ -29,4 +29,4 @@ print("hello", score("hello"))
 print("goodbye",score("goodbye"))
 print("TeStIng", score("TeStIng"))
 print("tHisisAlOngWord",score("tHisisAlOngWord"))
-
+print("pneumonoultramicroscopicsilicovolcanoconiosis",score("pneumonoultramicroscopicsilicovolcanoconiosis"))
