@@ -5,6 +5,6 @@ int main() {
     while (i < 20)
     {
         std::cout << i << std::endl;
-        i++;
+        i = i + 1;
     }
 }
