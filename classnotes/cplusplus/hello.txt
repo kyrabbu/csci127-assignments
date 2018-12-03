@@ -1,0 +1,13 @@
+g++ -c hello.cpp
+source.cpp => compile => object.o => link => executable hello or a.out
+
+if it does not return anything, you did it right
+but that does not mean your program works, it just means it compiled.
+
+g++ -c hello.cpp
+=> compile, don't look for main, it could be somewhere else
+
+-pedantic
+-Wall
+
+./a.out

@@ -1,0 +1,8 @@
+statement; => single statement
+statement; => compound statement
+
+
+if (boolean)
+  st;
+else
+  st;

@@ -1,0 +1,13 @@
+-pedantic
+-Wall
+
+a byte has 8 bits
+long
+double
+
+internally
+short == int == long
+people just use int
+
+mantissa
+exponent
