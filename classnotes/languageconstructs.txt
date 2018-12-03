@@ -1,0 +1,8 @@
+You can modify!
+s2[8] = 'X';
+
+for loop
+
+for (____init____;____test____;____change___)
+for (i=0;i<s2.length();i++)
+- you can do variable declarations
