@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-double disc(double a, double b, double c) //in case parameters are not integers
+double discriminant(double a, double b, double c) //in case parameters are not integers
 {
   double squared = pow(b,2);
   double ac = a*c;
@@ -13,7 +13,7 @@ double disc(double a, double b, double c) //in case parameters are not integers
 
 double quadsolve(double a, double b, double c)
 {
-  double d = disc(a,b,c);
+  double d = discriminant(a,b,c);
   double square = sqrt(d);
   double first_pos = (-b + square);
   double r_pos = first_pos/(2*a); //final answer
