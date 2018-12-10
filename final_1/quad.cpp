@@ -44,15 +44,10 @@ int main()
   //disc(5, -2.5, -3.53543);
 
   std::cout << quadsolve(7, -7, -3) << std::endl;
-  //quadsolve(7, -7, -3) //if you do not use return
   std::cout << quadsolve(1, 11, 28) << std::endl;
-  //quadsolve(1, 11, 28)
   std::cout << quadsolve(4, 16, -48) << std::endl;
-  //quadsolve(4, 16, -48);
   std::cout << quadsolve(5, -2.5, -3.53543) << std::endl;
-  //quadsolve(5, -2.5, -3.53543);
   std::cout << quadsolve(-4, 16, -48) << std::endl;
-  //quadsolve(-4, 16, -48);
   std::cout << quadsolve(-4, 2, -21) << std::endl;
   std::cout << quadsolve(1, 0, 0) << std::endl;
 
