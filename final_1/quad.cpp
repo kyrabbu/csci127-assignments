@@ -20,15 +20,19 @@ double quadsolve(double a, double b, double c)
   //double first_neg = (-b - square); //unused
   //double r_neg = first_neg/(2*a); //final answer-unused
 
+  double answer;
+
   if (d >= 0)
   {
-    std::cout << "Positive Root: " << r_pos << std::endl;
+    //std::cout << "Positive Root: " << r_pos << std::endl;
+    answer = r_pos;
   }
   else
   {
-    std::cout << "Negative Root: " << 0 << std::endl;
+    //std::cout << "Negative Root: " << 0 << std::endl;
+    answer = 0;
   }
-  return 0;
+  return answer; //instructions said return
 }
 
 int main()
@@ -39,11 +43,18 @@ int main()
   //disc(4, 16, -48);
   //disc(5, -2.5, -3.53543);
 
-  quadsolve(7, -7, -3);
-  quadsolve(1, 11, 28);
-  quadsolve(4, 16, -48);
-  quadsolve(5, -2.5, -3.53543);
-  quadsolve(-5, -2.5, -3.53543);
-  quadsolve(-4, 16, -48);
+  std::cout << quadsolve(7, -7, -3) << std::endl;
+  //quadsolve(7, -7, -3) //if you do not use return
+  std::cout << quadsolve(1, 11, 28) << std::endl;
+  //quadsolve(1, 11, 28)
+  std::cout << quadsolve(4, 16, -48) << std::endl;
+  //quadsolve(4, 16, -48);
+  std::cout << quadsolve(5, -2.5, -3.53543) << std::endl;
+  //quadsolve(5, -2.5, -3.53543);
+  std::cout << quadsolve(-4, 16, -48) << std::endl;
+  //quadsolve(-4, 16, -48);
+  std::cout << quadsolve(-4, 2, -21) << std::endl;
+  std::cout << quadsolve(1, 0, 0) << std::endl;
+
   return 0;
 }
