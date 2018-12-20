@@ -1,9 +1,8 @@
 def addline(d, line):
-    l = line.lower() #lower case
+    l = line.lower()
     for element in l.split():
-        d.setdefault(element[0], []) #make first letter key
-        #makes list as value
-        d[element[0]] = d[element[0]] + [element]
+        d.setdefault(element[0], [])
+        d[element[0]] += [element]
     return d
 
 def spellcheck(d, word):

@@ -1,4 +1,3 @@
-
 def canMakeWord(letters,word):
     tester = makeList(letters)
     real = makeList(word)
