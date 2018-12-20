@@ -1,14 +1,14 @@
 def addline(d, line):
-    l = line.lower()
-    for element in l.split():
+    line = line.lower()
+    for element in line.split():
         d.setdefault(element[0], [])
         d[element[0]] += [element]
     return d
 
 def spellcheck(d, word):
-    w = word.lower()
-    for l in d.values():
-        if w in l:
+    word = word.lower()
+    for i in d.values():
+        if word in i:
             return True
     return False
 
@@ -19,9 +19,9 @@ print(addline(d,"HeLlO mY nAmE is KyRa"))
 print(addline(d,"WHAT is WRONG with THIS line"))
 print(addline(d,"testing testing testing testing"))
 
-k = addline(d,"HELLO MY NAME IS KYRA")
-print(spellcheck(k,"DO YOU LIKE APPLES"))
-print(spellcheck(k,"hi"))
-print(spellcheck(k,"i"))
-print(spellcheck(k,"kyra"))
-print(spellcheck(k,"testing"))
+new_d = addline(d,"HELLO MY NAME IS KYRA")
+print(spellcheck(new_d,"DO YOU LIKE APPLES"))
+print(spellcheck(new_d,"hi"))
+print(spellcheck(new_d,"i"))
+print(spellcheck(new_d,"kyra"))
+print(spellcheck(new_d,"testing"))
