@@ -19,7 +19,7 @@ print(addline(d,"HeLlO mY nAmE is KyRa"))
 print(addline(d,"WHAT is WRONG with THIS line"))
 print(addline(d,"testing testing testing testing"))
 
-new_d = addline(d,"HELLO MY NAME IS KYRA")
+new_d = addline(d,"HELLO MY NAME IS KYRA") #making this for below
 print(spellcheck(new_d,"DO YOU LIKE APPLES"))
 print(spellcheck(new_d,"hi"))
 print(spellcheck(new_d,"i"))
