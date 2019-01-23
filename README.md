@@ -1,1 +1,1 @@
-# csci127-assignments
+# CSCI127-Assignments
