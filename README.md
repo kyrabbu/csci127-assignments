@@ -1,1 +1,1 @@
-# Fall 2018 - Zamansky
+# Fall 2018 - Professor Zamansky
